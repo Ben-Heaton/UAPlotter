@@ -14,6 +14,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('welcome/', views.welcome, name='welcome'),
-    path('sightings_map/', views.sightings_map, name='sightings_map'),
+    path('', views.main, name='main'),
+    path('map/', views.map, name='map'),
 ]
