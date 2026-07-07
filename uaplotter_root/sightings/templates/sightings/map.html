@@ -1,0 +1,29 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Sightings Map
+{% endblock %}
+
+{% block extra_styles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sightings/map.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>This will be the sightings map page (extended from the master)</h1><br>
+                <p>   \ /       </p>
+                <p>  (@ @)      </p>
+                <p>   \-/       </p>
+                <p>\/\/ \/\/    </p>
+                <p>   \ /       </p>
+                <p>  _| |_      </p>
+                <p>-----------  </p>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

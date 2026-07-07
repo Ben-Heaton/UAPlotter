@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}UAPlotter{% endblock %}</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css' %}">
+
+    </head>
+
+    <body>
+        {% block content %}
+        {% endblock %}
+        
+        <!-- jQuery -->
+        <script src="{% static 'jquery/jquery-4.0.0.js' %}"></script>
+
+        <!-- Bootstrap -->
+        <script src="{% static 'bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js' %}"></script>
+        
+    </body>
+</html>
