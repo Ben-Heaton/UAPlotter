@@ -7,6 +7,10 @@
 {% block extra_styles %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'sightings/map.css' %}">
+
+    {% load static %}
+    <script src="{% static 'sightings/map.js' %}"></script>
+
 {% endblock %}
 
 {% block content %}
@@ -25,5 +29,7 @@
             </div>
         </div>
     </div>
+
+    <button onclick="myFunction()">Click me!</button>
 
 {% endblock %}

@@ -4,10 +4,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}UAPlotter{% endblock %}</title>
+        <title>UAPlotter: {% block title %}{% endblock %}</title>
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="{% static 'bootstrap/bootstrap-5.3.8-dist/css/bootstrap.min.css' %}">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/favicon_io/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon_io/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon_io/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'favicon/favicon_io/site.webmanifest' %}">
 
         {% block extra_styles %}{% endblock %}
 
@@ -22,6 +28,6 @@
 
         <!-- Bootstrap -->
         <script src="{% static 'bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js' %}"></script>
-        
+
     </body>
 </html>
