@@ -118,7 +118,7 @@ USE_TZ = True
 # The URL prefix used to access static files in the browser.
 STATIC_URL = 'static/'
 
-# Tells Django where to find the project-level static files on disk.
+# Tells Django where to find the project-level static files on disk. IN THIS CASE THE PATH IS: uaplotter_root/static/
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]

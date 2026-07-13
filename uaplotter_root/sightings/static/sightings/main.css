@@ -1,0 +1,14 @@
+h1 {
+    color: whitesmoke;
+}
+
+p {
+    color: whitesmoke;
+}
+
+body {
+    background-image: url('media/cow_abduction_squoosh.webp');
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-position: 72% 5%;  /* horizontal, vertical. Top Left corner is 0% 0%. The Right Bottom corner is 100% 100%. */
+}

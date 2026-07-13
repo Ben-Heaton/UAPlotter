@@ -4,10 +4,21 @@
     Welcome
 {% endblock %}
 
+{% block extra_styles %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'sightings/main.css' %}">
+
+    <!-- JS File here if needed-->
+
+{% endblock %}
+
+
 {% block content %}
-    
-    <h1>This is the Welcome Page (extended from the master)</h1>
-    <p>Hello there!</p>
-    <a href="/sightings/map">Click here to see the aliens!</a>
+    <div class="text-center mt-2">
+        <h1>Welcome to UAPlotter!</h1>
+        <p class="pt-2">This Django site overlays Tier 1 NUFORC reports onto a world map.</p>
+        <p> This allows you to explore highly anomalous unidentified aerial phenomena (a.k.a. UFOs) sightings across the globe.</p>
+        <a href="/sightings/map" class="btn btn-primary">Show me the aliens! &#128125</a>
+    </div>
 
 {% endblock %}
