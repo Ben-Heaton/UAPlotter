@@ -5,31 +5,28 @@
 {% endblock %}
 
 {% block extra_styles %}
+
     {% load static %}
+    <link rel="stylesheet" href="{% static 'sightings/libs/leaflet/dist/leaflet.css' %}" />
     <link rel="stylesheet" href="{% static 'sightings/map.css' %}">
-
-    {% load static %}
-    <script src="{% static 'sightings/map.js' %}"></script>
-
+ 
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>This will be the sightings map page (extended from the master)</h1><br>
-                <p>   \ /       </p>
-                <p>  (@ @)      </p>
-                <p>   \-/       </p>
-                <p>\/\/ \/\/    </p>
-                <p>   \ /       </p>
-                <p>  _| |_      </p>
-                <p>-----------  </p>
-
-            </div>
+    <div id="loading_screen">
+        <div class="spinner-border text-light position-absolute top-50 start-50" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
 
-    <button onclick="myFunction()">Click me!</button>
+    <!-- The map div for LeafletJS -->
+    <div id="map"></div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+    {% load static %}
+    <script src="{% static 'sightings/libs/leaflet/dist/leaflet.js' %}"></script>
+    <script src="{% static 'sightings/map.js' %}"></script>
 
 {% endblock %}

@@ -15,7 +15,8 @@
         <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon_io/favicon-16x16.png' %}">
         <link rel="manifest" href="{% static 'favicon/favicon_io/site.webmanifest' %}">
 
-        {% block extra_styles %}{% endblock %}
+        {% block extra_styles %}
+        {% endblock %}
 
     </head>
 
@@ -28,6 +29,9 @@
 
         <!-- Bootstrap -->
         <script src="{% static 'bootstrap/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js' %}"></script>
+
+        {% block extra_scripts %}
+        {% endblock %}
 
     </body>
 </html>
