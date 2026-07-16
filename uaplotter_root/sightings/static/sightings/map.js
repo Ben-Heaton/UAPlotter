@@ -13,7 +13,31 @@ $(document).ready(function() {
   // Add tile layer to map.
   Esri_NatGeoWorldMap.addTo(map);
 
-  // AFTER map finishes loading.
+  // Hiding the side panel divs
+  $(".side_panel").hide();
+
+  // When map finishes loading.
   $('#loading_screen').fadeOut('slow');
+
+  /*==== Listeners ========================================================== */
+
+  // Side panel opening
+  $(".side_panel_blade_closed").click(function() {
+    $(".side_panel").toggle("slide");
+    $(".side_panel_blade_closed").hide();
+    $(".side_panel_blade_open").fadeIn("fast");
+
+
+  });
+
+  // Side panel closing
+  $(".side_panel_blade_open").click(function() {
+    $(".side_panel").toggle("slide");
+    $(".side_panel_blade_open").hide();
+    $(".side_panel_blade_closed").show();
+
+  });
+
+
 
 });
