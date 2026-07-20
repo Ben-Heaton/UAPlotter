@@ -14,30 +14,27 @@ $(document).ready(function() {
   Esri_NatGeoWorldMap.addTo(map);
 
   // Hiding the side panel divs
-  $(".side_panel").hide();
+  $("#side_panel_blade_open").hide();
+  $("#side_panel").hide();
 
   // When map finishes loading.
   $('#loading_screen').fadeOut('slow');
 
   /*==== Listeners ========================================================== */
 
-  // Side panel opening
-  $(".side_panel_blade_closed").click(function() {
-    $(".side_panel").toggle("slide");
-    $(".side_panel_blade_closed").hide();
-    $(".side_panel_blade_open").fadeIn("fast");
-
-
+  // When the side panel opens...
+  $("#side_panel_blade_closed").click(function() {
+    $("#side_panel").toggle("slide");
+    $("#side_panel_blade_closed").hide();
+    $("#side_panel_blade_open").show();
   });
 
-  // Side panel closing
-  $(".side_panel_blade_open").click(function() {
-    $(".side_panel").toggle("slide");
-    $(".side_panel_blade_open").hide();
-    $(".side_panel_blade_closed").show();
-
+  // ...and closes.
+  $("#side_panel_blade_open").click(function() {
+    $("#side_panel").toggle("slide");
+    $("#side_panel_blade_open").hide();
+    $("#side_panel_blade_closed").show();
   });
-
 
 
 });

@@ -23,17 +23,16 @@
     <div id="map"></div>
 
     <!-- The 'side panel' div for user to select dates etc -->
-    <div class="side_panel_blade_closed"></div>
-    
-    <div class="side_panel contaner">
-        <div class="side_panel_blade_open"></div>
-    </div>
+    <div class="metallicss" id="side_panel_blade_closed"><i class="fa-solid fa-bars fa-xl bars_icon"></i></div>
+    <div class="metallicss" id="side_panel_blade_open"><i class="fa-solid fa-xmark fa-xl xmark_icon"></i></div>
+    <div class="container" id="side_panel"></div>
 
 {% endblock %}
 
 {% block extra_scripts %}
     {% load static %}
     <script src="{% static 'sightings/libs/leaflet/dist/leaflet.js' %}"></script>
+    <script type="module" src="{% static 'sightings/libs/metallicss/dist/metallicss.min.js' %}"></script><!-- For metallics css colours. https://www.metallicss.com/ -->
     <script src="{% static 'sightings/map.js' %}"></script>
 
 {% endblock %}

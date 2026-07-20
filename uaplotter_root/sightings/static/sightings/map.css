@@ -12,36 +12,59 @@
     width: 100%;
 }
 
-.side_panel_blade_closed {
+#side_panel_blade_closed {
     position: absolute;
     left: 0;
     top: 10%;
     height: 80vh;
     width: 50px;
     z-index: 9999;
-    background: red;
+    border: 1px solid black;
     border-radius: 0 25px 25px 0;
+    box-shadow: 5px 5px 8px black;
+
 }
 
-.side_panel_blade_open {
-    position: fixed;
-    left: 87.5vw;
+#side_panel_blade_open {
+    position: absolute;
+    left: 0;
     top: 10%;
     height: 80vh;
     width: 50px;
     z-index: 9999;
-    background: red;
+    border: 1px solid black;
     border-radius: 0 25px 25px 0;
+    box-shadow: 5px 5px 8px black;
 
 }
 
-.side_panel {
+#side_panel {
     position: absolute;
     left: 0;
     top: 10%;
     height: 80vh;
     width: 90vw;
     z-index: 8888;
-    background: blue;
+    border: 1px solid black;
     border-radius: 0 25px 25px 0;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 8px black;
+    opacity: 0.8;
+}
+
+.metallicss {
+    --convexity: 0;
+    --metal: silver;
+}
+
+.bars_icon {
+    position: relative;
+    top: 50%;
+    left: 10%;
+}
+
+.xmark_icon {
+    position: relative;
+    top: 50%;
+    left: 10%;
 }
