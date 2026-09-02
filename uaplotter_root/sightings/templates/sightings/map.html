@@ -9,7 +9,9 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'sightings/libs/leaflet/dist/leaflet.css' %}" />
     <link rel="stylesheet" href="{% static 'sightings/map.css' %}">
- 
+    <link rel="stylesheet" href="{% static 'sightings/libs/leaflet_markercluster/MarkerCluster.css' %}">
+    <link rel="stylesheet" href="{% static 'sightings/libs/leaflet_markercluster/MarkerCluster.Default.css' %}">
+
 {% endblock %}
 
 {% block content %}
@@ -32,6 +34,7 @@
 {% block extra_scripts %}
     {% load static %}
     <script src="{% static 'sightings/libs/leaflet/dist/leaflet.js' %}"></script>
+    <script src="{% static 'sightings/libs/leaflet_markercluster/leaflet.markercluster.js' %}"></script>
     <script type="module" src="{% static 'sightings/libs/metallicss/dist/metallicss.min.js' %}"></script><!-- For metallics css colours. https://www.metallicss.com/ -->
     <script src="{% static 'sightings/map.js' %}"></script>
 
