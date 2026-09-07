@@ -17,8 +17,19 @@ $(document).ready(function() {
   $("#side_panel_blade_open").hide();
   $("#side_panel").hide();
 
+  // The cusom marker.
+  const alienIcon = L.icon({ iconUrl: alienIconUrl });
+
+  // Loops through every sighting coord (from the work done in map.html) and drops a marker on the map.
+  sightings.forEach(function(sighting) {
+    L.marker([sighting.lat, sighting.lng], {icon: alienIcon})
+     .addTo(map)
+     .bindPopup(sighting.summary);
+  });
+
   // When map finishes loading.
   $('#loading_screen').fadeOut('slow');
+
 
   /*==== Listeners ========================================================== */
 

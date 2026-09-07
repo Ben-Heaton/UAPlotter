@@ -33,6 +33,31 @@
 
 {% block extra_scripts %}
     {% load static %}
+
+    <!-- 
+        Django renders template files on the server BEFORE they reach the browser.
+        This means data can be inserted into the HTML before the user ever sees it.
+        Here Django loops over the 'sightings' database rows and writes them
+        into the page as a JavaScript array of coordinates and summaries.
+    -->
+    <script>
+        const sightings = [
+            {% for sighting in sightings %}
+            {
+                lat: {{ sighting.lat }},
+                lng: {{ sighting.lng }},
+                summary: "{{ sighting.summary }}"
+            },
+            {% endfor %}
+        ];
+
+        // We also need to pass the static file URL (for the custom marker) to JavaScript.
+        // This is because the JS file doesn't know where sightings/media/icons/ is on the server.
+        // map.js runs entirely in the browser with no knowledge of the Django project structure.
+        const alienIconUrl = "{% static 'sightings/media/icons/alien_marker_29x32.svg' %}";
+
+    </script>
+
     <script src="{% static 'sightings/libs/leaflet/dist/leaflet.js' %}"></script>
     <script src="{% static 'sightings/libs/leaflet_markercluster/leaflet.markercluster.js' %}"></script>
     <script type="module" src="{% static 'sightings/libs/metallicss/dist/metallicss.min.js' %}"></script><!-- For metallics css colours. https://www.metallicss.com/ -->
