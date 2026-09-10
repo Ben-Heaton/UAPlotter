@@ -27,7 +27,68 @@
     <!-- The 'side panel' div for user to select dates etc -->
     <div class="metallicss" id="side_panel_blade_closed"><i class="fa-solid fa-bars fa-xl bars_icon"></i></div>
     <div class="metallicss" id="side_panel_blade_open"><i class="fa-solid fa-xmark fa-xl xmark_icon"></i></div>
-    <div class="container" id="side_panel"></div>
+    <div class="container" id="side_panel">
+        
+        <div class="container" id="side_panel_inner_container">
+            <div class="row text-center py-2">
+                <div class="col">
+                    <p>Use the options below to filter the UAP (UFO) sightings results on the map!</p>
+                </div>
+            </div>
+            
+            <div class="row text-center py-2"><!-- Row 1 -->
+                <div class="col form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="n_america_switch" name="n_america_switch" value="yes" checked>
+                    <label class="form-check-label" for="n_america_switch">Add/Remove North America</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="cet_america_switch" name="cet_america_switch" value="yes" checked>
+                    <label class="form-check-label" for="cet_america_switch">Add/Remove Central America</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="s_america_switch" name="s_america_switch" value="yes" checked>
+                    <label class="form-check-label" for="s_america_switch">Add/Remove South America</label>
+                </div>
+            </div>
+
+            <div class="row text-center py-2"><!-- Row 2 -->
+                <div class="col form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="europe_switch" name="europe_switch" value="yes" checked>
+                    <label class="form-check-label" for="europe_switch">Add/Remove Europe</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="mid_east_switch" name="mid_east_switch" value="yes" checked>
+                    <label class="form-check-label" for="mid_east_switch">Add/Remove the Middle East</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="africa_switch" name="africa_switch" value="yes" checked>
+                    <label class="form-check-label" for="africa_switch">Add/Remove Africa</label>
+                </div>
+            </div>
+
+            <div class="row text-center py-2"><!-- Row 3 -->
+                <div class="col form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="asia_switch" name="asia_switch" value="yes" checked>
+                    <label class="form-check-label" for="asia_switch">Add/Remove Asia</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="a_and_o_switch" name="a_and_o_switch" value="yes" checked>
+                    <label class="form-check-label" for="a_and_o_switch">Add/Remove Australia & Oceania</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="sea_ocean_switch" name="sea_ocean_switch" value="yes" checked>
+                    <label class="form-check-label" for="sea_ocean_switch">Add/Remove Sea & Ocean</label>
+                </div>
+            </div>
+
+        </div><!-- End of side_panel_inner_container -->
+    </div>
 
 {% endblock %}
 
