@@ -107,7 +107,13 @@
             {
                 lat: {{ sighting.lat }},
                 lng: {{ sighting.lng }},
-                summary: "{{ sighting.summary }}"
+                date: "{{ sighting.date }}",
+                time: "{{ sighting.time }}",
+                city: "{{ sighting.city }}",
+                shape: "{{ sighting.shape }}",
+                media: "{{ sighting.media }}",
+                summary: "{{ sighting.summary }}",
+                link: "{{ sighting.link }}"
             },
             {% endfor %}
         ];
