@@ -32,8 +32,8 @@ $(document).ready(function() {
         <b>City:</b> ${sighting.city}<br>
         <b>Shape:</b> ${sighting.shape}<br>
         <b>Media:</b> ${sighting.media}<br>
-        <b>Summary:</b> ${sighting.summary}...<br>
-        <b>NUFORC Link:</b> <a href="${sighting.link}">${sighting.link}</a><br>
+        <b>Summary:</b> ${sighting.summary}...<hr>
+        <b>NUFORC Report Link:</b> <a href="${sighting.link}" target="_blank">${sighting.link}</a>
     `;
 
     L.marker([sighting.lat, sighting.lng], {icon: alienIcon})

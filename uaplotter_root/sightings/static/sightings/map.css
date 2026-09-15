@@ -76,3 +76,8 @@
     max-width: 90%;
     border: solid red 2px;
 }
+
+.leaflet-popup-content b {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
