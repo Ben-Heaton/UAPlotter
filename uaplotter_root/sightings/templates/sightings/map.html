@@ -28,15 +28,23 @@
     <div class="metallicss" id="side_panel_blade_closed"><i class="fa-solid fa-bars fa-xl bars_icon"></i></div>
     <div class="metallicss" id="side_panel_blade_open"><i class="fa-solid fa-xmark fa-xl xmark_icon"></i></div>
     <div class="container" id="side_panel">
+
+        <div class="row text-center mt-4" id="side_panel_inner_message">
+            <div class="col">
+                <h3>Use the options below to filter the UAP (UFO) sightings results on the map!</h3>
+            </div>
+        </div>
         
-        <div class="container" id="side_panel_inner_container">
-            <div class="row text-center py-2">
+        <div class="container" id="side_panel_inner_switches">
+
+            <div class="row text-center"><!-- Continents Checkboxes ---------------------------------------------------------------------------------------------->
                 <div class="col">
-                    <p>Use the options below to filter the UAP (UFO) sightings results on the map!</p>
+                    <h4>Continents</h4>
                 </div>
             </div>
             
-            <div class="row text-center py-2"><!-- Row 1 -->
+            <div class="row"><!-- Row 1 -->
+
                 <div class="col form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="n_america_switch" name="n_america_switch" value="yes" checked>
                     <label class="form-check-label" for="n_america_switch">Add/Remove North America</label>
@@ -51,13 +59,15 @@
                     <input class="form-check-input" type="checkbox" id="s_america_switch" name="s_america_switch" value="yes" checked>
                     <label class="form-check-label" for="s_america_switch">Add/Remove South America</label>
                 </div>
-            </div>
 
-            <div class="row text-center py-2"><!-- Row 2 -->
                 <div class="col form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="europe_switch" name="europe_switch" value="yes" checked>
                     <label class="form-check-label" for="europe_switch">Add/Remove Europe</label>
                 </div>
+
+            </div>
+
+            <div class="row"><!-- Row 2 -->
 
                 <div class="col form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="mid_east_switch" name="mid_east_switch" value="yes" checked>
@@ -68,9 +78,7 @@
                     <input class="form-check-input" type="checkbox" id="africa_switch" name="africa_switch" value="yes" checked>
                     <label class="form-check-label" for="africa_switch">Add/Remove Africa</label>
                 </div>
-            </div>
 
-            <div class="row text-center py-2"><!-- Row 3 -->
                 <div class="col form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="asia_switch" name="asia_switch" value="yes" checked>
                     <label class="form-check-label" for="asia_switch">Add/Remove Asia</label>
@@ -81,13 +89,120 @@
                     <label class="form-check-label" for="a_and_o_switch">Add/Remove Australia & Oceania</label>
                 </div>
 
+            </div>
+
+            <div class="row"><!-- Row 3 -->
+
                 <div class="col form-check form-switch">
                     <input class="form-check-input" type="checkbox" id="sea_ocean_switch" name="sea_ocean_switch" value="yes" checked>
                     <label class="form-check-label" for="sea_ocean_switch">Add/Remove Sea & Ocean</label>
                 </div>
             </div>
 
+            <div class="row"><!-- Decades Checkboxes -------------------------------------------------------------------------------------------->
+                <div class="col text-center">
+                    <h4>Decades</h4>
+                </div>
+            </div>
+            
+            <div class="row"><!-- Row 4 -->
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1890s_switch" value="1890s" checked>
+                    <label class="form-check-label" for="1890s_switch">1890s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1900s_switch" value="1900s" checked>
+                    <label class="form-check-label" for="1900s_switch">1900s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1910s_switch" value="1910s" checked>
+                    <label class="form-check-label" for="1910s_switch">1910s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1920s_switch" value="1920s" checked>
+                    <label class="form-check-label" for="1920s_switch">1920s</label>
+                </div>
+
+            </div>
+
+            <div class="row"><!-- Row 5 -->
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1930s_switch" value="1930s" checked>
+                    <label class="form-check-label" for="1930s_switch">1930s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1940s_switch" value="1940s" checked>
+                    <label class="form-check-label" for="1940s_switch">1940s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1950s_switch" value="1950s" checked>
+                    <label class="form-check-label" for="1950s_switch">1950s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1960s_switch" value="1960s" checked>
+                    <label class="form-check-label" for="1960s_switch">1960s</label>
+                </div>
+
+
+            </div>
+
+            <div class="row"><!-- Row 6 -->
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1970s_switch" value="1970s" checked>
+                    <label class="form-check-label" for="1970s_switch">1970s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1980s_switch" value="1980s" checked>
+                    <label class="form-check-label" for="1980s_switch">1980s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="1990s_switch" value="1990s" checked>
+                    <label class="form-check-label" for="1990s_switch">1990s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="2000s_switch" value="2000s" checked>
+                    <label class="form-check-label" for="2000s_switch">2000s</label>
+                </div>
+
+            </div>
+
+            <div class="row"><!-- Row 7 -->
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="2010s_switch" value="2010s" checked>
+                    <label class="form-check-label" for="2010s_switch">2010s</label>
+                </div>
+
+                <div class="col form-check form-switch">
+                    <input class="form-check-input decade-switch" type="checkbox" id="2020s_switch" value="2020s" checked>
+                    <label class="form-check-label" for="2020s_switch">2020s</label>
+                </div>
+
+                <div class="col form-check form-switch"><!-- Place holder for 2030s filter -->
+                    <input class="form-check-input decade-switch" type="checkbox" id="2030s_switch" value="2030s" checked>
+                    <label class="form-check-label" for="2030s_switch">2030s</label>
+                </div>
+
+                <div class="col form-check form-switch"><!-- Place holder for 2040s filter -->
+                    <input class="form-check-input decade-switch" type="checkbox" id="2040s_switch" value="2040s" checked>
+                    <label class="form-check-label" for="2040s_switch">2040s</label>
+                </div>
+
+            </div>
+
         </div><!-- End of side_panel_inner_container -->
+        
     </div>
 
 {% endblock %}

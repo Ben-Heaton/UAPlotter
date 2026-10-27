@@ -16,4 +16,5 @@ from . import views
 urlpatterns = [
     path('', views.main, name='main'),
     path('map/', views.map, name='map'),
+    path('api/', views.sightings_api, name='sightings_api'),
 ]
