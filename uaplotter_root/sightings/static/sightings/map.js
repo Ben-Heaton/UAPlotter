@@ -42,6 +42,12 @@ $(document).ready(function() {
 
     const decades = getCheckedDecades();
 
+    // If no decades are ticked, show nothing.
+    if (decades.length === 0) {
+      markerLayer.clearLayers();
+      return;
+    }
+
     // Build the URL — pass checked decades as a comma separated list.
     const url = decades.length > 0
       ? `/sightings/api/?decades=${decades.join(',')}`

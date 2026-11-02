@@ -18,16 +18,21 @@ def map(request):
     return render(request, 'sightings/map.html', {'sightings': sightings})
 
 def sightings_api(request):
-    # Read the decade from the URL e.g. /api/?decade=1960s
-    # If no decade provided, default to None
-    decade = request.GET.get('decade', None)
+    # Read the comma separated decades from the URL e.g. /api/?decades=1960s,1970s
+    decades_param = request.GET.get('decades', '')
 
-    # Filter by decade if one was provided, otherwise return all sightings
-    if decade:
-        sightings = Sightings.objects.filter(decade=decade)
+    if decades_param:
+        # Turn "1960s,1970s" into a Python list: ['1960s', '1970s']
+        decades = decades_param.split(',')
+
+        # decade__in means "decade matches ANY value in this list".
+        sightings = Sightings.objects.filter(decade__in=decades)
     else:
         sightings = Sightings.objects.all()
 
-    # Convert to a list of dictionaries and return as JSON
-    data = list(sightings.values('lat', 'lng', 'date', 'city', 'country', 'shape', 'summary'))
+    # Convert to a list of dictionaries and return as JSON.
+    data = list(sightings.values(
+        'lat', 'lng', 'date', 'time', 'city',
+        'country', 'shape', 'media', 'summary', 'link'
+    ))
     return JsonResponse(data, safe=False)
